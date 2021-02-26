@@ -52,12 +52,9 @@ $K = 10
 Everythink is in SimplePoshCompiler.ps1
 ```powershell
 $PoshFile = "$PSScriptRoot\simpleproc.ps1"
-#$PoshFile = "C:\Users\Andreas\Desktop\PoshCmp\simpleproc.ps1"
 
 $Filename = $(split-path $PoshFile -leaf).Replace('.ps1','')
 $AsmFile = $(split-path $PoshFile -Parent) + '\' + $Filename + '.asm'
-
-#"C:\Users\Andreas\Desktop\PoshCmp\simpleproc.asm" 
 
 $inputStream = New-Object System.IO.StreamReader $PoshFile
 $p = New-Object Parser $inputStream
